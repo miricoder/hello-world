@@ -1,0 +1,26 @@
+version: 2.1
+jobs:
+  print_hello:
+    docker:
+      - image: circleci/python:3.7.4
+    steps:
+      #- checkout
+      - run: "Hello"
+          #name: Install Python Dependencies
+          #command: |
+  print_world:
+  docker:
+    - image: circleci/python:3.7.4
+    steps:
+      #- checkout
+      - run: "World"
+        #echo 'export PATH
+
+          name: Test
+workflows:
+  hello_world:
+    jobs:
+      - print_hello
+      - print_world:
+          requires:
+            -print_hello
