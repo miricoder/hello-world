@@ -22,7 +22,7 @@ jobs:
     - image: circleci/python:3.7.4
     steps:
       # checkout
-      - run: "World"
+      - run: echo "World"
         #echo 'export PATH
           name: Test
 workflows:
