@@ -15,7 +15,6 @@ jobs:
       #- checkout
       - run: "World"
         #echo 'export PATH
-
           name: Test
 workflows:
   hello_world:
